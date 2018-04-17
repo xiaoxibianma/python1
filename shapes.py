@@ -53,6 +53,19 @@ class Circle:
         self.X = self.center.x
         self.Y = self.center.y
 
+    def from_tuple(center=(0, 0), radius=1):
+        list1 = list(center)
+        center = Point(list1[0], list1[1])
+        circle = Circle(center, radius)
+        return circle
+
+    def center_from_tuple(self, center=(0, 0)):
+        list1 = list(center)
+        self.center = Point(list1[0], list1[1])
+        self.X = self.center.x
+        self.Y = self.center.y
+
+
     @property
     def center(self):
         return self._center
